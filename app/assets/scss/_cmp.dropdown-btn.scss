@@ -3,18 +3,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 6rem;
+  min-width: 10rem;
   background-color: #fafbfc;
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 3px;
+  border: 0.1rem solid rgba(27, 31, 35, 0.15);
+  border-radius: 0.2rem;
   color: #24292e;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
-    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
   cursor: pointer;
 
-  padding: 6px 16px;
-  font-weight: 500;
-  line-height: 20px;
+  padding: 0.6rem 1.6rem;
+  line-height: 2rem;
   transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   & :hover {
     background-color: #f3f4f6;
@@ -22,7 +19,7 @@
     transition-duration: 0.1s;
   }
   > .caret-icon {
-    margin-left: 0.4rem;
+    margin-left: 0.8rem;
     height: 0.8rem;
     width: 0.8rem;
   }

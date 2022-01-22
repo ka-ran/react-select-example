@@ -1,13 +1,16 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "production",
-  devtool: "inline-source-map",
   devServer: {
     port: 3456,
     open: true,
     historyApiFallback: true,
+  },
+  optimization: {
+    usedExports: true,
   },
   context: __dirname,
   entry: [path.resolve(__dirname, "app", "root", "Index.bs.js")],
@@ -41,5 +44,6 @@ module.exports = {
       filename: "index.html",
       template: "index.html",
     }),
+    new CleanWebpackPlugin(),
   ],
 };
