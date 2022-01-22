@@ -24,7 +24,7 @@ let make = (~options: array(ReactSelect.selectOption)) => {
 
   <Dropdown
     isOpen
-    onClose=toggleOpen
+    toggleDropdown=toggleOpen
     target={
       <DropdownButton onClick=toggleOpen>
         {switch (selectedOption) {
