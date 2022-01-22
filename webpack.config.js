@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   devtool: "inline-source-map",
   devServer: {
     port: 3456,
@@ -20,7 +20,6 @@ module.exports = {
     modules: [path.resolve(__dirname, "node_modules")],
     extensions: [".bs.js", ".js", ".css"],
   },
-
   module: {
     rules: [
       {
