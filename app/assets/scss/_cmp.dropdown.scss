@@ -1,0 +1,19 @@
+.c-dropdown {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  > .menu {
+    min-width: 15rem;
+    border-radius: 0.2rem;
+    margin-top: 0.2rem;
+    position: absolute;
+    z-index: 2;
+  }
+  > .outer-area {
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
+  }
+}
