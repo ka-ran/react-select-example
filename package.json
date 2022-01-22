@@ -4,7 +4,7 @@
   "description": "ahrefs-select",
   "scripts": {
     "dev": "webpack-dev-server --hot",
-    "build": "rm -rf public && webpack --config webpack.config.js",
+    "build": "rm -rf public && bsb -clean-world && bsb -make-world && webpack --config webpack.config.js",
     "bs:clean": "bsb -clean-world",
     "bs:build": "bsb -make-world",
     "bs:watch": "bsb -make-world -w",

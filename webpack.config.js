@@ -10,7 +10,7 @@ module.exports = {
     historyApiFallback: true,
   },
   context: __dirname,
-  entry: ["./app/root/Index.bs.js"],
+  entry: [path.resolve(__dirname, "app", "root", "Index.bs.js")],
   output: {
     path: path.resolve("public/build/"),
     filename: "[name].[hash].bundle.js",
