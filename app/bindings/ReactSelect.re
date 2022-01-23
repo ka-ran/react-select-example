@@ -29,7 +29,8 @@ external make:
     ~options: array(selectOption),
     ~placeholder: option(React.element)=?,
     ~value: option(selectOption),
-    ~styles: option(styles)=?
+    ~styles: option(styles)=?,
+    ~tabSelectsValue: option(bool)=?
   ) =>
   React.element =
   "default";

@@ -13,9 +13,9 @@ type state = {
 let make = (~options: array(ReactSelect.selectOption)) => {
   let (state, setState) =
     React.useState(_ => {isOpen: false, selectedOption: None});
-  let toggleOpen = () => {
-    setState(pre_state => {...pre_state, isOpen: !state.isOpen});
-  };
+  let openDropdown = () => setState(pre => {...pre, isOpen: true});
+  let closeDropdown = () => setState(pre => {...pre, isOpen: false});
+  let toggleOpen = () => setState(pre => {...pre, isOpen: !pre.isOpen});
   let onSelectChange = (option: option(selectOption)) => {
     setState(_ => {selectedOption: option, isOpen: false});
   };
@@ -24,7 +24,8 @@ let make = (~options: array(ReactSelect.selectOption)) => {
 
   <Dropdown
     isOpen
-    toggleDropdown=toggleOpen
+    openDropdown
+    closeDropdown
     target={
       <DropdownButton onClick=toggleOpen>
         {switch (selectedOption) {
@@ -46,6 +47,7 @@ let make = (~options: array(ReactSelect.selectOption)) => {
       closeMenuOnSelect=true
       onChange=onSelectChange
       options
+      tabSelectsValue=false
       placeholder={React.string("Search")}
       styles={
         control: existing => {
